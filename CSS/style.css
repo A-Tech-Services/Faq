@@ -99,6 +99,11 @@ hr{
         margin: auto;
     }
 
+    .div1 img{
+        margin-top: 1em;
+        margin-inline: auto;
+    }
+
     .div2{
         margin: auto;
         max-width: 100%;
