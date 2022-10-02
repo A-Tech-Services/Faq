@@ -16,7 +16,7 @@ body{
 }
 
 .container{
-    width: 55em;
+    max-width: 55em;
     min-height: 32em;
     border-radius: 2em;
     background-color: #fff;
@@ -44,7 +44,7 @@ body{
     /* border: solid black; */
     border-radius: 2em 0 0 2em;
     width: 21em;
-    height: 32em;
+    min-height: 32em;
 
     background-image: url(/img/illustration-woman-online-desktop.svg);
     background-repeat: no-repeat;
@@ -60,50 +60,50 @@ body{
 .div2{
     /* border: solid black; */
     border-radius: 0 2em 2em 0;
-    width: 32em;
-    height: 32em;
+    width: 42em;
+    min-height: 32em;
     padding: 4em;
 }
 
-.div2 h1{
+.div2 h4{
     font-weight: 700;
 }
 
 .faqs{
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
-.question{
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: 1s ease;
-}
 
-.question:hover{
+.accordion-button:hover{
     color: hsl(14, 88%, 65%);
 }
 
-.results{
-    margin-top: 1em;
-    display: none;
-}
 
-.results.active{
-    display: block;
-}
 
 hr{
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.down{
-    display: none;
-}
 
-.down.active{
-    display: block;
+@media (max-width: 768px){
+    .container{
+        max-width: 90%;
+    }
+
+    .flexContainer{
+        flex-direction: column;
+    }
+
+    .div1{
+        margin: auto;
+    }
+
+    .div2{
+        margin: auto;
+        max-width: 100%;
+        padding: 1em;
+    }
 }
 
 
