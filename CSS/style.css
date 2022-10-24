@@ -9,106 +9,107 @@
 
 body{
     background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    height: 100%;
-    margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 .container{
-    max-width: 55em;
-    min-height: 32em;
-    border-radius: 2em;
-    background-color: #fff;
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    background-image: url("/img/bg-pattern-desktop.svg");
-    background-repeat: no-repeat;
-    background-position: -25em -10em;
-    background-size: 45em;
-
-    box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.329);
-}
-
-.flexContainer{
+    padding: 5em;
+    background-color: #fff;
+    border-radius: 2rem;
+    max-width: 90%;
+    width: 55rem;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
 }
 
-.div1{
-    /* border: solid black; */
-    border-radius: 2em 0 0 2em;
-    width: 21em;
-    min-height: 32em;
-
-    background-image: url(/img/illustration-woman-online-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: -5em 5em;
-    background-size: 26em;
+.left-img{
+    margin-left: -5rem;
 }
 
-.div1 img{
-    margin-top: 12em;
-    margin-left: -7em;
+.left-img img{
+    max-width: 90%;
 }
 
-.div2{
-    /* border: solid black; */
-    border-radius: 0 2em 2em 0;
-    width: 42em;
-    min-height: 32em;
-    padding: 4em;
+.right-text{
+    width: 25rem;
 }
 
-.div2 h4{
+.section{
+    border-bottom: 2px solid rgb(230, 230, 230);
+    padding: 0.5em 0;
+}
+
+.section span{
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.accord h2{
     font-weight: 700;
 }
 
-.faqs{
-    margin-top: 1em;
-}
-
-
-.accordion-button:hover{
+.accord-header:hover{
     color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.accord-body{
+    display: none;
+    font-size: 14px;
+}
+
+.accord-body1.active,.accord-body2.active,
+.accord-body3.active,.accord-body4.active,
+.accord-body5.active{
+    display: block;
+}
+
+.icon1.arrowup,.icon2.arrowup,
+.icon3.arrowup,.icon4.arrowup.arrowup,
+.icon5.arrowup{
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+.head1.bolden,.head2.bolden,
+.head3.bolden,.head4.bolden,
+.head5.bolden{
+    font-weight: 700;
 }
 
 
-
-hr{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-
-@media (max-width: 768px){
+@media (max-width: 950px){
     .container{
-        max-width: 90%;
-    }
-
-    .flexContainer{
         flex-direction: column;
+        padding: 2em;
     }
 
-    .div1{
+    .accord h2{
+        text-align: center;
+    }
+
+    .left-img{
         margin: auto;
+        text-align: center;
+        margin-bottom: 2em;
     }
-
-    .div1 img{
-        margin-top: 1em;
-        margin-inline: auto;
-    }
-
-    .div2{
-        margin: auto;
+    .right-text{
         max-width: 100%;
-        padding: 1em;
+    }
+
+    .accord-header{
+        font-size: 14px;
+    }
+
+    .accord-body{
+        font-size: 13px;
     }
 }
-
 
